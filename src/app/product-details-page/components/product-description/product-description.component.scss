@@ -1,0 +1,89 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+@import '../../../../scss/reset';
+@import '../../../../scss/mixins';
+
+.main-container {
+  padding: 0 $content-padding;
+  background-color: $white-color;
+
+  &-wrapper {
+    padding: 95px $wrapper-padding 134px $wrapper-padding;
+    display: flex;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+.image-container {
+  min-width: 330px;
+  height: 414px;
+  margin-top: 8px;
+  margin-right: 8%;
+}
+
+.details-container {
+  &-info {
+    h2 {
+      color: $primary-color;
+      font-family: $main-font-bold;
+      font-size: 53px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    h5 {
+      color: $font-color;
+      font-family: $main-font-regular;
+      font-size: $font-size-heading;
+      line-height: 30px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: $font-color;
+      font-family: $main-font-regular;
+      font-size: $font-size-medium;
+      line-height: 30px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@include laptop {
+  .main-container {
+    &-wrapper {
+      padding: 95px 0 134px 0;
+      display: flex;
+    }
+  }
+
+  .image-container {
+    min-width: 270px;
+  }
+
+  .details-container {
+    &-info {
+      h2 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .details-container {
+    margin-top: 100px;
+  }
+
+  .main-container {
+    &-wrapper {
+      flex-direction: column;
+    }
+  }
+
+  .image-container {
+    min-width: 100%;
+    margin: 0;
+  }
+}

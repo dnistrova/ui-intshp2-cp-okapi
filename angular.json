@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Capstone-Angular-Project",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,6 +56,22 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
+            },
+            "mock": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.mock.ts"
+                }
+              ]
             }
           }
         },
@@ -65,8 +81,11 @@
             "browserTarget": "Capstone-Angular-Project:build"
           },
           "configurations": {
-            "production": {
+            "prod": {
               "browserTarget": "Capstone-Angular-Project:build:production"
+            },
+            "test": {
+              "browserTarget": "Capstone-Angular-Project:build:test"
             }
           }
         },

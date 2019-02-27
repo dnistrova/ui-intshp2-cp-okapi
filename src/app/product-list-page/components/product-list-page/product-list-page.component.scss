@@ -1,0 +1,28 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+@import '../../../../scss/reset';
+@import '../../../../scss/mixins';
+
+.main-container {
+  margin: 0 auto;
+  max-width: $main-container-width;
+  background-color: $bg-color;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 30px; 
+}
+
+.main-container-wrapper {
+  padding: 120px $content-padding;
+}
+
+app-product-grid {
+  background-color: $bg-color;
+  width: 100%;
+}
+
+@include tablet {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,171 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/fonts";
+@import "../../../../scss/reset";
+@import "../../../../scss/mixins";
+
+u {
+  cursor: pointer;
+}
+
+.main-container {
+  padding: 0 $content-padding;
+  background-color: $bg-color;
+}
+
+.join {
+  padding: 30px;
+  display: flex;
+  background-color: $white-color;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 110px;
+  margin: 10% auto;
+  max-width: $main-container-width;
+}
+
+.letter {
+  color: $primary-color;
+  font-family: $main-font-bold;
+  font-size: 18px;
+  margin-right: 30px;
+}
+
+.info,
+.register {
+  display: flex;
+  align-items: center;
+}
+
+.button-join {
+  width: 100px;
+  height: 50px;
+  color: $white-color;
+  background-color: $primary-color;
+  font-family: $main-font-bold;
+  cursor: pointer;
+
+  &.disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+.join-message {
+  font-family: $main-font-italic;
+  color: $black-color;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input {
+  border-radius: 3px;
+  background: url(../../../../assets/img/mail-icon.png) no-repeat scroll 7px 7px;
+  padding-left: 30px;
+  outline: none;
+  z-index: 2;
+  justify-content: center;
+
+  &.ng-valid {
+    box-shadow: 0px 0px 12px 1px $primary-color;
+  }
+
+  &.ng-invalid.ng-touched {
+    box-shadow: 0px 0px 12px 1px rgba(66, 66, 66, 0.74);
+  }
+}
+
+::placeholder {
+  color: $font-color;
+  font-size: 14px;
+  font-family: $main-font-italic;
+  font-weight: bold;
+}
+
+span {
+  font-size: 12px;
+  color: $font-color;
+  position: absolute;
+  padding-top: 26px;
+}
+
+.unsub-message {
+  padding-top: 0px;
+}
+
+form {
+  display: flex;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  margin-right: 10px;
+}
+
+.congrats-message {
+  color: $primary-color;
+  font-family: $main-font-bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@include laptop {
+  .letter {
+    margin-right: 0;
+  }
+
+  .main-container {
+    padding: 0;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-join {
+    height: 40px;
+  }
+
+  form {
+    margin-top: 10px;
+  }
+
+  .input-block {
+    margin-right: 10px;
+  }
+
+  .unsub-message {
+    padding-top: 0px;
+    padding-left: 44px;
+    position: static;
+  }
+}
+
+@include mobile {
+  .info {
+    display: none;
+  }
+
+  .unsub-message {
+    padding-left: 24px;
+  }
+  
+  .join {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  
+  .join-message {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .congrats-message {
+    font-size: 16px;
+    text-align: center;
+  }
+}

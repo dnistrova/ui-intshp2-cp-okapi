@@ -4,7 +4,24 @@
 
 export const environment = {
   production: false,
-  baseURL: 'http://localhost:4200'
+  baseURL: 'http://localhost:4200',
+  killswitchesURL: 'assets/config/killswitches.json',
+  productsURL: 'assets/mocks/products.json',
+  pdpURL: 'assets/mocks/pdp.json',
+  homepageURL: 'assets/mocks/homepage.json',
+  filtersURL: 'assets/mocks/filters.json'
+};
+
+export const referenceLinks = {
+  americanExpURL: 'https://www.americanexpress.com/',
+  payPalURL: 'https://www.paypal.com/ua/home',
+  visaURL: 'https://www.visa.com.ua/',
+  masterCardURL: 'https://www.mastercard.us/en-us.html',
+  amazonURL: 'https://pay.amazon.com/us',
+  facebookURL: 'https://www.facebook.com/griddynamics',
+  twitterURL: 'https://twitter.com/griddynamics',
+  googlePlusURL: 'https://plus.google.com/115302417170674279390',
+  linkedinURL: 'https://www.linkedin.com/company/grid-dynamics/'
 };
 
 /*
@@ -15,3 +32,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
